@@ -1,0 +1,270 @@
+/* COLORS */
+
+/* 
+Teal color (used for headings and backgrounds): #4aaaa5
+
+Regular font color (used for paragraphs and all text besides the headings): #777777
+
+Main header background color: #ffffff
+
+Main header border color: #cccccc
+
+Footer background color: #666666
+
+Main content background color: #ffffff
+
+Main content border color: #dddddd 
+*/
+
+
+/* ___________INDEX / ABOUT ME____________ */
+
+/* GENERAL */
+
+body {
+    background-image: url("../images/hero.jpeg");
+    background-size: cover;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+}
+
+h1 { font-size: 2rem; }
+
+.h1-teal { color: #4aaaa5; }
+
+.h1-underline { border-bottom: #cccccc solid 1px; padding-bottom: 15px; }
+
+a:link,
+a:visited {
+    color: #777777;
+    text-decoration: none;
+}
+
+p {
+    line-height: 35px; color: #777777;
+    font-size: 1.2rem;
+}
+
+.p-accent { color: #4aaaa5; font-weight: bold; }
+
+/* REUSABLE BOXES/BUTTONS */
+
+.box {
+    margin: 50px auto;
+    margin-bottom: 100px;
+    width: 60%;
+    background-color: #ffffff;
+    padding: 10px 50px;
+    border-radius: 3px;
+}
+
+.page-content {
+    margin-bottom: -50px;
+    height: 100vh;
+    width: 100%;
+}
+
+button {
+    background-color: #4aaaa5;
+    margin: 40px 0;
+    color: #ffffff;
+    padding: 15px 50px;
+    border-radius: 3px;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    color: #cccccc;
+    background-color: #2a6b68; 
+    border-radius: 25px;    
+    box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, .45);
+}
+
+button:active {
+    color: #fff;
+}
+
+button:focus {
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .45);
+}
+
+.icon {
+    font-size: 3rem;
+    margin-right: 25px;
+}
+
+/* NAV */
+
+nav {
+    height: 100px;
+    width: 100%;
+    background-color: #ffffff;
+    top: 0;
+    border-bottom: 2px solid #cccccc;
+}
+
+.nav-content {
+    width: 60%;
+    height: 100%;
+    margin: 50px auto;
+    position: relative;
+    margin: 0 auto;
+}
+
+.nav-head {
+    background-color: #4aaaa5;
+    margin-left: -50px;
+    height: 80px;
+    float: left;
+    padding: 11px 50px;
+    color: #ffffff;
+    overflow: hidden;
+    line-height: 40px;
+}
+
+.nav-links {
+    float: right;
+    padding-top: 30px;
+    margin-right: -50px;
+}
+
+li {
+    display: inline-block;
+    padding: 0 30px;
+}
+
+li:not(:last-child) { 
+    border-right: 1px solid #777777;
+}
+
+
+/* ABOUT ME */
+
+.about-me { box-shadow: 0 2rem 4rem #3b3b3b; }
+
+.headshot {
+    height: 180px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 120px;
+    -webkit-shape-outside:circle(25%);
+    shape-outside:circle(25%);
+}
+
+/* PORTFOLIO */
+
+.portfolio { box-shadow: 0 2rem 4rem #3b3b3b; }
+
+.project-img {
+    display: inline-block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border: 3px #cccccc solid;
+}
+
+.img-box {
+    display: inline-block;
+    padding: 20px 30px;
+    width: 25%;
+}
+
+.img-label {
+    text-align: center;
+    margin-top: -5px;
+    color: #4aaaa5;
+    transition: all .5s;
+}
+
+.img-label:hover,
+.img-label:active {
+    color: #4aaaa5;
+    transform: translateY(-5px);
+}
+
+/* CONTACT */
+
+.contact { box-shadow: 0 2rem 4rem #3b3b3b; }
+
+input, textarea {
+    border: #cccccc 1px solid;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+.input-box {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+
+.footer,
+.push {
+  height: 50px;
+}
+
+footer {
+    background-color: #777777;
+    padding: 0;
+    border-top: #4aaaa5 8px solid;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    color: #cccccc;
+    text-align: center;
+    margin: 0;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1275px) {
+    /* PORTFOLIO */
+    .img-box { padding: 10px 5px; width: 30%; }
+}
+
+@media only screen and (max-width: 980px) {
+    /* ABOUT */
+    .box {
+        margin: 50px 40px;
+        margin-bottom: 100px;
+        width: 60%;
+    }
+
+    /* NAV */
+
+    nav { height: 80px; }
+
+    .nav-content { width: 90%; }
+
+    .nav-head h1 { font-size: 1.4rem; }
+    
+    .nav-head { height: 60px; padding: 10px 20px; line-height: 25px; margin-left: 0; }
+    
+    .nav-links { padding-top: 15px; margin-right: 0; }
+
+
+    /* PORTFOLIO */
+    .img-box { padding: 10px 10px; width: 45%; }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .box {
+        margin: 50px auto;
+        margin-bottom: 100px;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    body p { color: pink; }
+}
