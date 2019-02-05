@@ -143,13 +143,20 @@ li:not(:last-child) {
 
 .about-me { box-shadow: 0 2rem 4rem #3b3b3b; }
 
+.about-me p {
+    animation-name: bounce-in;
+    animation-duration: 1.69s;
+}
+
 .headshot {
     height: 180px;
     border-radius: 50%;
     float: left;
     margin-right: 80px;
-    -webkit-shape-outside:circle(45%);
-    shape-outside:circle(45%);
+    -webkit-shape-outside:circle(38%);
+    shape-outside:circle(38%);
+    animation-name: bounce-in;
+    animation-duration: 1.5s;
 }
 
 /* PORTFOLIO */
@@ -303,3 +310,76 @@ footer p {
     .img-box { padding: 10px 10px; width: 90%; }
 
 }
+
+/* ANIMATIONS */
+
+.animate{
+    animation: bounce-in ease 1s;
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+    animation-fill-mode:forwards; /*when the spec is finished*/
+    -webkit-animation: bounce-in ease 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+    -moz-animation: bounce-in ease 1s;
+    -moz-animation-iteration-count: 1;
+    -moz-transform-origin: 50% 50%;
+    -moz-animation-fill-mode:forwards; /*FF 5+*/
+  }
+  
+  @keyframes bounce-in{
+    0% {
+      opacity:0;
+      transform:  translate(-300px,0px)  ;
+    }
+    80% {
+      opacity:1;
+      transform:  translate(30px,0px)  ;
+    }
+    90% {
+      transform:  translate(-5px,0px)  ;
+    }
+    100% {
+      opacity:1;
+      transform:  translate(0px,0px)  ;
+    }
+  }
+  
+  @-moz-keyframes bounce-in{
+    0% {
+        opacity:0;
+        transform:  translate(-300px,0px)  ;
+      }
+      80% {
+        opacity:1;
+        transform:  translate(30px,0px)  ;
+      }
+      90% {
+        transform:  translate(-5px,0px)  ;
+      }
+      100% {
+        opacity:1;
+        transform:  translate(0px,0px)  ;
+      }
+  }
+  
+  @-webkit-keyframes bounce-in {
+    0% {
+        opacity:0;
+        transform:  translate(-300px,0px)  ;
+      }
+      80% {
+        opacity:1;
+        transform:  translate(30px,0px)  ;
+      }
+      90% {
+        transform:  translate(-5px,0px)  ;
+      }
+      100% {
+        opacity:1;
+        transform:  translate(0px,0px)  ;
+      }
+  }
+  
+  
