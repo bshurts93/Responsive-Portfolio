@@ -72,13 +72,13 @@ button {
     padding: 15px 50px;
     border-radius: 3px;
     font-size: 1.2rem;
+    transition: all 0.3s;
 }
 
 button:hover {
-    color: #cccccc;
+    color: #ffffff;
     background-color: #2a6b68; 
-    border-radius: 25px;    
-    box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, .45);
+    box-shadow: 0rem .5rem .5rem rgba(0, 0, 0, .45);
 }
 
 button:active {
@@ -147,9 +147,9 @@ li:not(:last-child) {
     height: 180px;
     border-radius: 50%;
     float: left;
-    margin-right: 120px;
-    -webkit-shape-outside:circle(25%);
-    shape-outside:circle(25%);
+    margin-right: 80px;
+    -webkit-shape-outside:circle(45%);
+    shape-outside:circle(45%);
 }
 
 /* PORTFOLIO */
@@ -240,7 +240,6 @@ footer p {
     }
 
     /* NAV */
-
     nav { height: 80px; }
 
     .nav-content { width: 90%; }
@@ -266,5 +265,41 @@ footer p {
 }
 
 @media only screen and (max-width: 640px) {
-    body p { color: pink; }
+
+    /* NAV */
+    nav { height: 140px; }
+    .nav-head {
+        width: 100%;
+        margin-left: 0;
+        padding: 11px 0;
+    }
+    .nav-head h1 { padding-left: 50px; }
+
+    .nav-content {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-links { 
+        display: block;
+        margin: 0;
+        margin-top: 20px;
+        width: 90%;
+        padding: 0;    
+    }
+
+    /* BOX */
+    .box {
+        margin: 40px auto;
+        margin-bottom: 100px;
+        width: 70%;
+    }
+
+    .about-me p { font-size: 90%; line-height: 32px;  }
+
+
+    /* PORTFOLIO */
+
+    .img-box { padding: 10px 10px; width: 90%; }
+
 }
